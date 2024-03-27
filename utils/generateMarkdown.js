@@ -4,23 +4,23 @@ function renderLicenseBadge(license) {
   const prefix = "[![License]";
   switch (license) {
     case "MIT":
-      return `${prefix}(https://img.shields.io/badge/License-MIT-yellow.svg)](${renderLicenseLink(
+      return `${prefix}(https://img.shields.io/badge/License-MIT-yellow.svg)](${getLicenseLink(
         license
       )})`;
     case "Apache 2.0":
-      return `${prefix}(https://img.shields.io/badge/License-Apache%202.0-blue.svg)](${renderLicenseLink(
+      return `${prefix}(https://img.shields.io/badge/License-Apache%202.0-blue.svg)](${getLicenseLink(
         license
       )})`;
     case "Boost":
-      return `${prefix}(https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](${renderLicenseLink(
+      return `${prefix}(https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](${getLicenseLink(
         license
       )})`;
     case "Creative Commons - Attribution":
-      return `${prefix}(https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](${renderLicenseLink(
+      return `${prefix}(https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](${getLicenseLink(
         license
       )})`;
     case "The Unlicense":
-      return `${prefix}(https://img.shields.io/badge/license-Unlicense-blue.svg)](${renderLicenseLink(
+      return `${prefix}(https://img.shields.io/badge/license-Unlicense-blue.svg)](${getLicenseLink(
         license
       )})`;
     default:
@@ -65,7 +65,7 @@ function generateMarkdown({
   description,
   install,
   usage,
-  contribute,
+  guide,
   license,
   tests,
   github,
@@ -81,7 +81,6 @@ ${description}
 
 
 ## Table of Contents
-  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [How to Contribute](#how-to-contribute)
@@ -99,7 +98,7 @@ ${usage}
 
 ## How to Contribute
 
-${contribute}
+${guide}
 
 ## License
 ${renderLicenseSection(license)}
@@ -117,4 +116,4 @@ Feel free to contact me via email at ${email} with additional questions
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = { generateMarkdown };

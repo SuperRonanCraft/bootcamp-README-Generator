@@ -4,7 +4,11 @@ module.exports = [
     message: "Please enter your README's Title:",
     name: "title",
   },
-  { type: "input", message: "Description of this project:", name: "desc" },
+  {
+    type: "input",
+    message: "Description of this project:",
+    name: "description",
+  },
   { type: "input", message: "Installation Instructions:", name: "install" },
   { type: "input", message: "Usage Information:", name: "usage" },
   { type: "input", message: "Contributions and Guidelines:", name: "guide" },
