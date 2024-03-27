@@ -1,18 +1,25 @@
-function createReadme({
-  title,
-  description,
-  install,
-  usage,
-  contribute,
-  license,
-  tests,
-  question,
-}) {
+function createReadme(
+  {
+    title,
+    description,
+    install,
+    usage,
+    contribute,
+    license,
+    tests,
+    github,
+    email,
+  },
+  badge
+) {
   return `# ${title}
+
+${badge}  
 
 ## Description
 
-${description}
+${description}  
+
 
 ## Table of Contents
   - [Description](#description)
@@ -45,7 +52,8 @@ ${tests}
 
 ## Questions?
 
-${question}
+View my [GitHub](https://github.com/${github}) profile  
+Feel free to contact me via email at ${email} with additional questions
 `;
 }
 

@@ -11,12 +11,22 @@ module.exports = [
   {
     type: "input",
     message: "Any Test Instructions:",
-    name: "instruction",
+    name: "tests",
   },
   {
     type: "list",
     message: "Choose a License:",
     name: "license",
     choices: require("./license.js"),
+  },
+  {
+    type: "input",
+    message: "What is your GitHub username?",
+    name: "github",
+  },
+  {
+    type: "input",
+    message: "What is your Email?",
+    name: "email",
   },
 ];

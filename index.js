@@ -2,6 +2,8 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const { createReadme } = require("./template.js");
+//Badges from badge-maker npm module
+const { makeBadge } = require("badge-maker");
 
 // TODO: Create an array of questions for user input
 const questions = require("./questions.js");
@@ -19,17 +21,12 @@ function init() {
     "Welcome to your personal README Generator!\nPlease answer the following questions...\n"
   );
   inquirer.prompt(questions).then((resp) => {
-    const data = {
-      title: "Title",
-      description: "Desc",
-      install: "install",
-      usage: "usage..",
-      contribute: "contribute",
-      license: "license",
-      tests: "tests",
-      question: "questions",
-    };
-    const readme = createReadme(data);
+    const badge = makeBadge({
+      label: "License",
+      message: resp.license,
+      color: "critical",
+    });
+    const readme = createReadme(resp, badge);
     writeToFile("README.md", readme);
   });
 }
