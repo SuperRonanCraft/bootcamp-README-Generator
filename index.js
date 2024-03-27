@@ -1,12 +1,12 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const { createReadme } = require("./template.js");
+const { createReadme } = require("./utils/template.js");
 //Badges from badge-maker npm module
 const { makeBadge } = require("badge-maker");
 
 // TODO: Create an array of questions for user input
-const questions = require("./questions.js");
+const questions = require("./utils/questions.js");
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
