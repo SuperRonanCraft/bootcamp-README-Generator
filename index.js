@@ -4,22 +4,7 @@ const inquirer = require("inquirer");
 const { createReadme } = require("./template.js");
 
 // TODO: Create an array of questions for user input
-const questions = [
-  {
-    type: "input",
-    message: "Please enter your README's Title:",
-    name: "title",
-  },
-  { type: "input", message: "Description of this project:", name: "desc" },
-  { type: "input", message: "Installation Instructions:", name: "install" },
-  { type: "input", message: "Usage Informatio:", name: "usage" },
-  { type: "input", message: "Contributions and Guidelines:", name: "guide" },
-  {
-    type: "input",
-    message: "Last but not least, Test Instructions:",
-    name: "instruction",
-  },
-];
+const questions = require("./questions.js");
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -34,8 +19,18 @@ function init() {
     "Welcome to your personal README Generator!\nPlease answer the following questions...\n"
   );
   inquirer.prompt(questions).then((resp) => {
-    const readme = createReadme(resp);
-    writeToFile("README.md", data);
+    const data = {
+      title: "Title",
+      description: "Desc",
+      install: "install",
+      usage: "usage..",
+      contribute: "contribute",
+      license: "license",
+      tests: "tests",
+      question: "questions",
+    };
+    const readme = createReadme(data);
+    writeToFile("README.md", readme);
   });
 }
 

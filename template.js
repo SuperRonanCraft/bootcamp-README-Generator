@@ -1,6 +1,8 @@
+const { getLicense } = require("./license");
+
 function createReadme({
   title,
-  descrition,
+  description,
   install,
   usage,
   contribute,
@@ -10,44 +12,43 @@ function createReadme({
 }) {
   return `# ${title}
 
-        ## Description
-        
-        ${descrition}
-        
-        ## Table of Contents
-        
-        - [](#)
-          - [Description](#description)
-          - [Installation](#installation)
-          - [Usage](#usage)
-          - [How to Contribute](#how-to-contribute)
-          - [License](#license)
-          - [Tests](#tests)
-          - [Questions](#questions)
-        
-        ## Installation
-        
-        ${install}
-        
-        ## Usage
-        
-        ${usage}
-        
-        ## How to Contribute
-        
-        ${contribute}
+## Description
 
-        ## License
-        
-        ${license}
-        
-        ## Tests
+${description}
 
-        ${tests}
-        
-        ## Questions?
+## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [How to Contribute](#how-to-contribute)
+  - [License](#license)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
-        ${question}
-        `;
+## Installation
+
+${install}
+
+## Usage
+
+${usage}
+
+## How to Contribute
+
+${contribute}
+
+## License
+
+${getLicense(license)}
+
+## Tests
+
+${tests}
+
+## Questions?
+
+${question}
+`;
 }
+
 module.exports = { createReadme };
