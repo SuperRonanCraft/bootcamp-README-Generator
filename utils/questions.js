@@ -17,7 +17,14 @@ module.exports = [
     type: "list",
     message: "Choose a License:",
     name: "license",
-    choices: require("../license.js"),
+    choices: [
+      "MIT",
+      "Apache 2.0",
+      "Boost",
+      "Creative Commons - Attribution",
+      "The Unlicense",
+      "None",
+    ],
   },
   {
     type: "input",
