@@ -1,5 +1,3 @@
-const { getLicense } = require("./license");
-
 function createReadme({
   title,
   description,
@@ -39,7 +37,7 @@ ${contribute}
 
 ## License
 
-${getLicense(license)}
+${license}
 
 ## Tests
 

@@ -17,6 +17,6 @@ module.exports = [
     type: "list",
     message: "Choose a License:",
     name: "license",
-    choices: require("./license.js").licenses,
+    choices: require("./license.js"),
   },
 ];

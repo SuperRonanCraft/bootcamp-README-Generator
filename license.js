@@ -1,6 +1,4 @@
-function getLicense(license) {}
-
-const licenses = [
+module.exports = [
   "GNU AGPLv3",
   "Mozilla Public License",
   "Apache License 2.0",
@@ -8,5 +6,3 @@ const licenses = [
   "Boost Software License 1.0",
   "The Unlicense",
 ];
-
-module.exports = { licenses, getLicense };
