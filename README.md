@@ -21,6 +21,10 @@ Download or Pull this project from GitHub  <br />Open the project on your favori
 
 - In terminal, run `node index` and enjoy!
 
+
+https://github.com/SuperRonanCraft/bootcamp-README-Generator/assets/7385626/51e0b1ad-bc6f-43b5-b543-e9044689fb08
+
+
 ## How to Contribute
 
 Want to contribute? Create a fork of this repo, add your changes to create a pull request (PR) when you are ready!
