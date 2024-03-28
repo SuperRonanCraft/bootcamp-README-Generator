@@ -72,13 +72,11 @@ function generateMarkdown({
   email,
 }) {
   return `# ${title}
-
 ${renderLicenseBadge(license)}  
 
 ## Description
 
 ${description}  
-
 
 ## Table of Contents
   - [Installation](#installation)
@@ -101,12 +99,11 @@ ${usage}
 ${guide}
 
 ## License
-${renderLicenseSection(license)}
 
+${renderLicenseSection(license)}
 ${renderLicenseLink(license)}
 
 ## Tests
-
 ${tests}
 
 ## Questions?
