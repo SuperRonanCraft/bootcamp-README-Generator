@@ -34,6 +34,7 @@ function renderLicenseLink(license) {
   return license !== "" ? `[License Link](${getLicenseLink(license)})` : "";
 }
 
+//Returns the link for a specific license (used in renderLicenseBadge and renderLicenseLink)
 function getLicenseLink(license) {
   switch (license) {
     case "MIT":
@@ -60,17 +61,10 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({
-  title,
-  description,
-  install,
-  usage,
-  guide,
-  license,
-  tests,
-  github,
-  email,
-}) {
+function generateMarkdown(
+  //Deconstruct the input object
+  { title, description, install, usage, guide, license, tests, github, email }
+) {
   return `# ${title}
 ${renderLicenseBadge(license)}  
 
@@ -113,4 +107,5 @@ Feel free to contact me via email at ${email} with additional questions
 `;
 }
 
+//Exports the only necessary function
 module.exports = { generateMarkdown };
