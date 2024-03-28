@@ -1,14 +1,12 @@
-# 1
+# README Generator
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
 ## Description
-
-2  
-
+ 
+A resource meant to quickly and easily create README files for git projects to help create fast and professional looking README's!
 
 ## Table of Contents
-  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [How to Contribute](#how-to-contribute)
@@ -18,15 +16,17 @@
 
 ## Installation
 
-3
+- Download or Pull this project from GitHub
+- Open the project on your favorite code editor
+- In the terminal run `npm install` to install required packages
 
 ## Usage
 
-4
+- In terminal, run `node index` and enjoy!
 
 ## How to Contribute
 
-5
+Want to contribute? Create a fork of this repo, add your changes to create a pull request (PR) when you are ready!
 
 ## License
 This project is licensed under the MIT License
@@ -35,9 +35,9 @@ This project is licensed under the MIT License
 
 ## Tests
 
-6
+There are no tests done in this project
 
 ## Questions?
 
-View my [GitHub](https://github.com/asd) profile  
-Feel free to contact me via email at asd2 with additional questions
+View my [GitHub](https://github.com/SuperRonanCraft) profile  
+Feel free to contact me via email at superronancraft@gmail.com with additional questions
